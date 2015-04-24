@@ -1,0 +1,146 @@
+fileFormatVersion: 2
+guid: 3857d97618cd6ef47b8bc6555597a4b2
+timeCreated: 1428843799
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Camera_DK2
+    100002: //RootNode
+    100004: ID103
+    100006: ID109
+    100008: ID12
+    100010: ID20
+    100012: ID39
+    100014: ID47
+    100016: ID53
+    100018: ID61
+    100020: ID67
+    100022: ID79
+    100024: ID85
+    100026: ID91
+    100028: ID97
+    100030: Objectif
+    400000: Camera_DK2
+    400002: //RootNode
+    400004: ID103
+    400006: ID109
+    400008: ID12
+    400010: ID20
+    400012: ID39
+    400014: ID47
+    400016: ID53
+    400018: ID61
+    400020: ID67
+    400022: ID79
+    400024: ID85
+    400026: ID91
+    400028: ID97
+    400030: Objectif
+    2300000: Camera_DK2
+    2300002: //RootNode
+    2300004: ID103
+    2300006: ID109
+    2300008: ID12
+    2300010: ID20
+    2300012: ID39
+    2300014: ID47
+    2300016: ID53
+    2300018: ID61
+    2300020: ID67
+    2300022: ID79
+    2300024: ID85
+    2300026: ID91
+    2300028: ID97
+    2300030: Objectif
+    3300000: Camera_DK2
+    3300002: //RootNode
+    3300004: ID103
+    3300006: ID109
+    3300008: ID12
+    3300010: ID20
+    3300012: ID39
+    3300014: ID47
+    3300016: ID53
+    3300018: ID61
+    3300020: ID67
+    3300022: ID79
+    3300024: ID85
+    3300026: ID91
+    3300028: ID97
+    3300030: Objectif
+    4300000: SketchUp
+    4300002: ID79
+    4300004: ID85
+    4300006: ID91
+    4300008: ID97
+    4300010: ID103
+    4300012: ID109
+    4300014: Camera_DK2
+    4300016: ID39
+    4300018: ID47
+    4300020: ID53
+    4300022: ID61
+    4300024: ID67
+    4300026: Objectif
+    4300028: ID12
+    4300030: ID20
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
