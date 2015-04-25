@@ -29,9 +29,11 @@ Outliers rejection is implemented using the [absolute deviation around the media
 The [Math.NET Numerics](http://numerics.mathdotnet.com/) library is used for the implementation of the Horn method (eigendecomposition of a matrix).
 
 ### Screenshots
-![PS Move Setup in Unity](https://forums.oculus.com/download/file.php?id=4246)
+![PS Move Setup in Unity editor](http://i.imgur.com/Hpx9GHQ.png)
 
-![PS Move Setup detail](https://forums.oculus.com/download/file.php?id=4265)
+![PS Move Setup in Unity](http://i.imgur.com/zRzwhYV.png)
+
+![PS Move Setup detail](http://i.imgur.com/ZT0TEnF.png)
 
 ### Status
 The utility is not complete yet. The registration code is functional and works correctly with test data, but the results are still unreliable when using the positions read from the PS Move. It's most probably because of noise or distortion in the tracking algorithm.
