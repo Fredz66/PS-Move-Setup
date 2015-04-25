@@ -124,7 +124,8 @@ public class MoveController : MonoBehaviour
 			}
 
 			// Correction of the position of the PS Move to cancel out the rotation from the DK2.
-			RotatedPosition = Quaternion.Inverse(dk2.Orientation) * (move.Position - dk2.Position) + dk2.Position;
+//			RotatedPosition = Quaternion.Inverse(dk2.Orientation) * (move.Position - dk2.Position) + dk2.Position;
+			RotatedPosition = move.Position;
 
 			float angle = Quaternion.Angle(dk2.Orientation, Quaternion.AngleAxis(0, Vector3.forward));
 			//if (angle < 5.0f) {
