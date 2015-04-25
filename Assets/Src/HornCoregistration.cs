@@ -95,6 +95,8 @@ class HornCoregistration : BaseCoregistration
             (float)eigenvector[0]
         );
         
+        //Rotation = Quaternion.Inverse(Rotation);
+        
         Debug.Log("Rotation: " + Rotation.eulerAngles);
     }
 
