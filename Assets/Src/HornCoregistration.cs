@@ -1,3 +1,5 @@
+//#define PSMOVESETUP_SCALE
+
 using UnityEngine;
 using System;
 using System.Collections;
@@ -95,14 +97,14 @@ class HornCoregistration : BaseCoregistration
             (float)eigenvector[0]
         );
         
-        Debug.Log("Rotation: " + Rotation.eulerAngles);
+        //Debug.Log("Rotation: " + Rotation.eulerAngles);
     }
 
 	public override void ComputeTranslation()
 	{
 		Translation = ControllerCentroid - Rotation * HelmetCentroid;
 
-		Debug.Log("Translation: " + Translation);
+		//Debug.Log("Translation: " + Translation);
 	}
 
 	public override void ComputeScale()
@@ -127,10 +129,14 @@ class HornCoregistration : BaseCoregistration
 			);
         }
 
+#if PSMOVESETUP_SCALE
 		float scale = (float)Math.Sqrt(helmetScale / controllerScale);
 
 		Scale = new Vector3(scale, scale, scale);
-		
-		Debug.Log("Scale: " + scale);
+
+		//Debug.Log("Scale: " + scale);
+#else		
+		Scale = Vector3.one;
+#endif
 	}
 }

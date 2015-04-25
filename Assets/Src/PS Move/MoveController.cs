@@ -128,7 +128,7 @@ public class MoveController : MonoBehaviour
 
 			float angle = Quaternion.Angle(dk2.Orientation, Quaternion.AngleAxis(0, Vector3.forward));
 			//if (angle < 5.0f) {
-				if (Coregistration.Correlations.Count == 100 && !Coregistration.IsRegistered) {
+				if (Coregistration.Correlations.Count == 300 && !Coregistration.IsRegistered) {
 					Coregistration.ComputeTransformMatrix();
 					TransformMatrix = Coregistration.GetTransformMatrix().inverse;
 				}
@@ -166,6 +166,14 @@ public class MoveController : MonoBehaviour
 		);
 		
 		GUI.Label(new Rect(10, Screen.height - 20, 500, 100), display, style);
+
+		if (Coregistration.IsRegistered) {
+			string display_registration = string.Format(
+				"Rotation (deg): {0} - Translation (cm): {1}",
+				Coregistration.GetRotation().eulerAngles, Coregistration.GetTranslation());
+
+			GUI.Label(new Rect(10, Screen.height - 40, 500, 100), display_registration, style);
+		}
 #else	
 		foreach (MoveManager move in moves) 
 		{
@@ -189,6 +197,14 @@ public class MoveController : MonoBehaviour
 			);
 			
 			GUI.Label(new Rect(10, Screen.height - 20, 500, 100), display, style);
+
+			if (Coregistration.IsRegistered) {
+				string display_registration = string.Format(
+					"Rotation (deg): {0} - Translation (cm): {1}",
+					Coregistration.GetRotation().eulerAngles, Coregistration.GetTranslation());
+
+				GUI.Label(new Rect(10, Screen.height - 40, 500, 100), display_registration, style);
+			}
 		}
 #endif
 	}

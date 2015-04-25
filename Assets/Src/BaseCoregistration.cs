@@ -154,6 +154,21 @@ abstract class BaseCoregistration : IEnumerable<Correlation>
 
 		IsRegistered = true;
 	}
+
+	public Quaternion GetRotation()
+	{
+		return Rotation;
+	}
+
+	public Vector3 GetTranslation()
+	{
+		return Translation;
+	}
+
+	public Vector3 GetScale()
+	{
+		return Scale;
+	}
 	
 	public Matrix4x4 GetTransformMatrix()
 	{
