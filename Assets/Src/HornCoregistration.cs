@@ -95,21 +95,42 @@ class HornCoregistration : BaseCoregistration
             (float)eigenvector[0]
         );
         
-        //Rotation = Quaternion.Inverse(Rotation);
-        
         Debug.Log("Rotation: " + Rotation.eulerAngles);
     }
 
 	public override void ComputeTranslation()
 	{
-		//Translation = ControllerCentroid - Rotation * HelmetCentroid;
-		Translation = Rotation * HelmetCentroid - ControllerCentroid;
+		Translation = ControllerCentroid - Rotation * HelmetCentroid;
+
 		Debug.Log("Translation: " + Translation);
 	}
 
 	public override void ComputeScale()
 	{
-		// TODO: compute scale to see if the PS Move tracking is reasonably accurate.
-		Scale = Vector3.one;
+		double helmetScale = 0.0f;
+		double controllerScale = 0.0f;
+
+        for (int i = 0 ; i < Correlations.Count ; i++)
+        {
+            Correlation c = Correlations[i];
+            
+            helmetScale += Math.Sqrt(
+				Math.Pow(c.HelmetPosition.x - HelmetCentroid.x, 2) +
+				Math.Pow(c.HelmetPosition.y - HelmetCentroid.y, 2) +
+				Math.Pow(c.HelmetPosition.z - HelmetCentroid.z, 2)
+			);
+
+            controllerScale += Math.Sqrt(
+				Math.Pow(c.ControllerPosition.x - ControllerCentroid.x, 2) +
+				Math.Pow(c.ControllerPosition.y - ControllerCentroid.y, 2) +
+				Math.Pow(c.ControllerPosition.z - ControllerCentroid.z, 2)
+			);
+        }
+
+		float scale = (float)Math.Sqrt(helmetScale / controllerScale);
+
+		Scale = new Vector3(scale, scale, scale);
+		
+		Debug.Log("Scale: " + scale);
 	}
 }

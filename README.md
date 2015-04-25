@@ -18,13 +18,13 @@ Previously the only driver available for MS Windows was the [CL Eye driver](http
 Instructions to set up the PS Move and the PS Eye on MS Windows and OS X can be found here : [https://github.com/cboulay/psmove-ue4/wiki](https://github.com/cboulay/psmove-ue4/wiki)
 
 ### Implementation
-The utility reads several hundreds positions of the PS Move and the Oculus DK2 (strapped together with rubber bands), stores them in a list of correlated positions and computes the rotation and translation between the two sets of 3D points.
+The utility reads several hundreds positions of the PS Move and the Oculus DK2 (strapped together with rubber bands), stores them in a list of correlated positions and computes the rotation, translation and scale between the two sets of 3D points.
 
-It's known as the [Wahba's problem](http://en.wikipedia.org/wiki/Wahba%27s_problem) and it can be solved with the [Kabsch algorithm](http://en.wikipedia.org/wiki/Kabsch_algorithm).
+It's known as the [Wahba's problem](http://en.wikipedia.org/wiki/Wahba%27s_problem) and can be solved with the [Kabsch algorithm](http://en.wikipedia.org/wiki/Kabsch_algorithm).
 
-The implementation uses the [Horn method](http://people.csail.mit.edu/bkph/papers/Absolute_Orientation.pdf) which is based on quaternions and is more robust, precise and numerically stable than the [SVD method](http://nghiaho.com/?page_id=671).
+The implementation uses the [Horn method](http://people.csail.mit.edu/bkph/papers/Absolute_Orientation.pdf) which is based on quaternions and seems to be more robust, precise and numerically stable than the [SVD method](http://nghiaho.com/?page_id=671).
 
-Outliers rejection is implemented using the [absolute deviation around the median](https://www.academia.edu/5324493/Detecting_outliers_Do_not_use_standard_deviation_around_the_mean_use_absolute_deviation_around_the_median).
+A first step of outlier rejection is implemented using the [absolute deviation around the median](https://www.academia.edu/5324493/Detecting_outliers_Do_not_use_standard_deviation_around_the_mean_use_absolute_deviation_around_the_median).
 
 The [Math.NET Numerics](http://numerics.mathdotnet.com/) library is used for the implementation of the Horn method (eigendecomposition of a matrix).
 
