@@ -62,10 +62,10 @@
      <Compile Include="Assets\OVR\Scripts\Util\OVRPlayerController.cs" />
      <Compile Include="Assets\OVR\Scripts\Util\OVRScreenFade.cs" />
      <Compile Include="Assets\OVR\Scripts\Util\OVRUGUI.cs" />
-     <Compile Include="Assets\Src\BaseCoregistration.cs" />
+     <Compile Include="Assets\Src\ControllerRegistration.cs" />
      <Compile Include="Assets\Src\DK2\DK2Controller.cs" />
      <Compile Include="Assets\Src\DK2\DK2Manager.cs" />
-     <Compile Include="Assets\Src\HornCoregistration.cs" />
+     <Compile Include="Assets\Src\MadgwickAHRS.cs" />
      <Compile Include="Assets\Src\PS Move\MoveController.cs" />
      <Compile Include="Assets\Src\PS Move\MoveManager.cs" />
      <None Include="Assets\Plugins\donotdelete.txt" />

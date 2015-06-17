@@ -589,7 +589,21 @@ public class MoveManager : MonoBehaviour
 			//orientation = new Quaternion(rx, ry, rz, rw) * initialOrientation;
 			//orientation = new Quaternion(rx, ry, rz, rw);
 			//orientation.Set(rx, ry, rz, rw);
-			orientation.Set(rz, -ry, rx, rw);
+
+			//orientation.Set(rz, -ry, rx, rw);
+			//orientation.Set(-ry, -rz, -rx, rw);
+
+			orientation.Set(rx, ry, rz, rw);
+			
+//FQuat myQuat = FQuat(0, 0, 0, 1) * FQuat(RawDataPtr->OriX, RawDataPtr->OriY, RawDataPtr->OriZ, RawDataPtr->OriW);
+//FQuat myQuat = FQuat(0, 0, sqrt(2.0) / 2, sqrt(2.0) / 2) * FQuat(RawDataPtr->OriX, RawDataPtr->OriY, RawDataPtr->OriZ, RawDataPtr->OriW);
+//FQuat myQuat = FQuat(0, 0, sqrt(2.0) / 2, sqrt(2.0) / 2) * FQuat(RawDataPtr->OriX, RawDataPtr->OriY, RawDataPtr->OriZ, RawDataPtr->OriW);
+//return myQuat.Rotator();
+//+return FQuat(-RawDataPtr->OriX, RawDataPtr->OriY, -RawDataPtr->OriZ, RawDataPtr->OriW).Rotator();
+//return FQuat(RawDataPtr->OriX, RawDataPtr->OriY, RawDataPtr->OriZ, RawDataPtr->OriW).Rotator();
+//return FQuat(-RawDataPtr->OriX, RawDataPtr->OriY, RawDataPtr->OriZ, -RawDataPtr->OriW).Rotator();
+
+
 			//orientation *= new Quaternion(0.5f, -0.5f, -0.5f, 0.5f);
 			//orientation = Quaternion.Inverse(orientation);
 //			orientation = initialOrientation * orientation;
