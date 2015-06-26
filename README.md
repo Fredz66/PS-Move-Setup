@@ -17,6 +17,12 @@ Previously the only driver available for MS Windows was the [CL Eye driver](http
 
 Instructions to set up the PS Move and the PS Eye on MS Windows and OS X can be found here : [https://github.com/cboulay/psmove-ue4/wiki](https://github.com/cboulay/psmove-ue4/wiki)
 
+### Download and build
+
+Clone this repository locally then open it with Unity 5.1. Then build the project.
+
+Strap the PSMove to the DK2 (e.g., using rubber bands) and place them both in view of their cameras. Run the exe file you built with Unity. When the application is running, move the headset-controller around their workspaces. After 300 samples are collected, the utility will update the position of the PSMove controller in the same coordinate space as the DK2.
+
 ### Implementation
 The utility reads several hundreds positions of the PS Move and the Oculus DK2 (strapped together with rubber bands), stores them in a list of correlated positions and computes the rotation, translation and scale between the two sets of 3D points.
 
