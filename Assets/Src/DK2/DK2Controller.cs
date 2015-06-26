@@ -65,9 +65,9 @@ public class DK2Controller : MonoBehaviour {
 				Magnetometer.x, Magnetometer.y, Magnetometer.z);
 
 			MARGOrientation.Set(AHRS.Quaternion[1], AHRS.Quaternion[2], AHRS.Quaternion[3], AHRS.Quaternion[0]);
-			transform.rotation = MARGOrientation;
+			//transform.rotation = MARGOrientation;
 
-			//transform.rotation = pose.orientation;
+			transform.rotation = pose.orientation;
 			transform.position = pose.position + DisplayedPosition;
 		}
 	}
