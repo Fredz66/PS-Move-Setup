@@ -160,7 +160,7 @@ class ControllerRegistration : IEnumerable<Correlation>
 		GlobalTransform[1,0] = (float)x[1];
 		GlobalTransform[2,0] = (float)x[2];
 
-		GlobalTransform[1,1] = (float)x[3];
+		GlobalTransform[0,1] = (float)x[3];
 		GlobalTransform[1,1] = (float)x[4];
 		GlobalTransform[2,1] = (float)x[5];
 
