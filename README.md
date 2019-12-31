@@ -31,6 +31,7 @@ It's known as the [Wahba's problem](http://en.wikipedia.org/wiki/Wahba%27s_probl
 ~The implementation uses the [Horn method](http://people.csail.mit.edu/bkph/papers/Absolute_Orientation.pdf) which is based on quaternions and seems to be more robust, precise and numerically stable than the [SVD method](http://nghiaho.com/?page_id=671).~
 
 EDIT: The initial implementation used the Horn method but it wasn't a solution to the problem. The current one uses the QR15 calibration algorithm published in 2012 by Floris Ernst. Here is the publication : https://www.rob.uni-luebeck.de/publikationen_downloads/ermm_12.pdf-b46951f770e1e17036ee6b18fe686a1b.pdf
+
 There was an error in the original algorithm though, I described the solution here : https://forums.oculusvr.com/developer/discussion/comment/276423/#Comment_276423
 
 A first step of outlier rejection is implemented using the [absolute deviation around the median](https://www.academia.edu/5324493/Detecting_outliers_Do_not_use_standard_deviation_around_the_mean_use_absolute_deviation_around_the_median).
